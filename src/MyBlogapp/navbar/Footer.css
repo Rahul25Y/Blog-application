@@ -1,0 +1,94 @@
+
+.footer-of-blog {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 20px; 
+  }
+  
+  .footer-of-blog div,
+  .footer-of-blog ul {
+    flex: 1 1 200px; 
+    min-width: 200px; 
+    margin: 10px 0;
+  }
+  
+  .footer-of-blog h2,
+  .footer-of-blog h3 {
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .footer-of-blog p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #bdc3c7;
+  }
+  
+  .footer-of-blog ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-of-blog ul li {
+    font-size: 14px;
+    line-height: 2;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-of-blog ul li:hover {
+    color: #1abc9c; 
+  }
+  
+  
+  .footer-of-blog ul li:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  
+  
+  .footer-of-blog h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1abc9c; 
+  }
+  
+  .p-logo-information {
+    font-size: 14px;
+    color: #bdc3c7;
+    line-height: 1.8;
+  }
+  
+  /* Responsive Design for Footer */
+  @media (max-width: 768px) {
+    .footer-of-blog {
+      text-align: center; 
+      flex-direction: column; 
+    }
+  
+    .footer-of-blog div,
+    .footer-of-blog ul {
+      flex: none; 
+      max-width: 100%; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-of-blog h2 {
+      font-size: 28px;
+    }
+  
+    .footer-of-blog h3 {
+      font-size: 18px;
+    }
+  
+    .footer-of-blog p,
+    .footer-of-blog ul li {
+      font-size: 12px;
+    }
+  }
+  

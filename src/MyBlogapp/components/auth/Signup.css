@@ -1,0 +1,100 @@
+/* Apply background only to the signup page */
+.signup-page {
+  background: linear-gradient(135deg, #1e90ff, #87cefa);
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: white; /* Keep body background white for other pages */
+  color: #333;
+}
+
+/* Auth form container */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-form-container {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.auth-btn {
+  background: linear-gradient(90deg, #6170f3, #6e8dff);
+  color: white;
+  border: none;
+  padding: 10px 90px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.auth-btn:hover {
+  background: linear-gradient(90deg, #7f8be7, #6e8dff);
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+}
+
+.auth-toggle {
+  margin-top: 20px;
+}
+
+.auth-toggle a {
+  color: #1d2671;
+  text-decoration: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .auth-form-container {
+    padding: 1.5rem;
+  }
+
+  .auth-btn {
+    padding: 10px 50px;
+    font-size: 18px;
+  }
+
+  .auth-input {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-form-container {
+    padding: 1rem;
+    width: 90%;
+  }
+
+  .auth-btn {
+    padding: 10px 40px;
+    font-size: 16px;
+  }
+
+  .auth-input {
+    padding: 6px;
+  }
+}

@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.forget-container{
+    width: 100%;
+    padding: 30px 50px;
+    box-shadow: 5px 5px 5px 5px;
+    height: 250px;
+    width: 500px;
+    text-align: center;
+    margin-left: 400px;
+    margin-top: 100px;
+    border-radius: 50px;
+}
+.forget-h2{ 
+    text-align: center;
+    font-size: 40px;
+}
+
+.forget-btn{
+    width: 100px;
+    height: 32px;
+    padding: 5px 5px;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.forget-input{
+    width: 500px;
+    height: 28px;
+    padding: 10px 10px;
+    margin-top: 40px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid black;
+}   
+
+.resetPass-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 600px;
+    padding: 130px 50px;
+}
+.reset-h2{ 
+    text-align: center;
+    font-size: 40px;
+}
+.reset-img{
+     margin-left: 25px;
+     width: 80px;
+}
+.reset-star{
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 100px;
+}
+.reset-password{
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 30px 10px;
+    border-radius: 25px;
+    height: 320px;
+    width: 550px;
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px;
+}
+.reset-btn{
+    width: 100px;
+    height: 32px;
+    padding: 5px 5px;
+    background-color: rgb(35, 35, 206);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.reset-input{
+    width: 500px;
+    height: 28px;
+    padding: 10px 10px;
+    margin-top: 40px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid black;
+}   
