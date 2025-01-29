@@ -1,5 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+const apiUrl = process.env.REACT_APP_API_URL;
+console.log(apiUrl);
 
 let initialState = {
   message: "",
@@ -13,7 +15,9 @@ let initialState = {
 export const SignInUser = createAsyncThunk(
   "user/signInUser",
   async (body, thunkAPI) => {
-    const reResult = await fetch("http://localhost:7000/user/login", {
+    
+    const reResult = await fetch(`${apiUrl}user/login`, {
+    
       method: "post",
       headers: {
         Accept: "application/json",
@@ -39,7 +43,7 @@ export const SignUpUser = createAsyncThunk(
   "signUpUser",
   async (requestData, { rejectWithValue }) => {
     const response = await axios.post(
-      "http://localhost:7000/user/signup",
+      `${apiUrl}user/signup`,
       requestData,
       {
         headers: {
@@ -55,7 +59,7 @@ export const forgetPassword = createAsyncThunk(
   "forgetpassword",
   async (body) => {
     const response = await axios.post(
-      "http://localhost:7000/user/forgetpassword",
+      `${apiUrl}user/forgetpassword`,
       body,
       {
         headers: {
@@ -71,7 +75,7 @@ export const forgetPassword = createAsyncThunk(
 export const resetPassword = createAsyncThunk(
   "resetpassword",
   async(body) => {
-    const res = await axios.post(`http://localhost:7000/user/reset-password/${body.user._id}/${body.token}`,
+    const res = await axios.post(`${apiUrl}user/reset-password/${body.user._id}/${body.token}`,
     body,
     );
     return res;

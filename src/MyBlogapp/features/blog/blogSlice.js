@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-
+const apiUrl = process.env.REACT_APP_API_URL;
 let initialState = {
   blogcreate_msg: "",
   bloglist: "",
@@ -15,7 +15,7 @@ let initialState = {
 // For get Blog
 
 export const getBlogs = createAsyncThunk("blog/getBlogs", async (thunkAPI) => {
-  const reResult = await fetch("http://localhost:7000/blog/blogs", {
+  const reResult = await fetch(`${apiUrl}blog/blogs`, {
     method: "get",
     headers: {
       "Content-Type": "application/json",
@@ -35,7 +35,7 @@ export const getBlogs = createAsyncThunk("blog/getBlogs", async (thunkAPI) => {
 export const createBlog = createAsyncThunk(
   "blog/create",
   async (body, thunkAPI) => {
-    const res = await axios.post("http://localhost:7000/blog/create", body, {
+    const res = await axios.post(`${apiUrl}blog/create`, body, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -50,7 +50,7 @@ export const getBlogDetails = createAsyncThunk(
   "blog/BlogDetails",
   async (id, thunkAPI) => {
     console.log(id);
-    const response = await fetch(`http://localhost:7000/blog/details/${id}`, {
+    const response = await fetch(`${apiUrl}blog/details/${id}`, {
       method: "get",
       headers: {
         Accept: "application/json",

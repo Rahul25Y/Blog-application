@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-
+const apiUrl = process.env.REACT_APP_API_URL;
 let initialState = {
     comment_msg : "",
     loading: false,
@@ -11,7 +11,7 @@ export const comments = createAsyncThunk(
     "blog/blogComment",
     async(body) => {
         const response = await axios.post(
-            `http://localhost:7000/comment/add/${body.blogId}`,
+            `${apiUrl}comment/add/${body.blogId}`,
             body,
             {
                 headers: {
